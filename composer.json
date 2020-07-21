@@ -1,0 +1,22 @@
+{
+  "name": "GSuite",
+  "description": "PHP library for Vendasta's GSuite service",
+  "type": "library",
+  "require": {
+    "grpc/grpc": "^v1.1.0",
+    "guzzlehttp/guzzle": "^6.3",
+    "mdanter/ecc": "^0.5.0",
+    "google/protobuf": "^3.6.0",
+    "vendasta/vax": "^1.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vendasta\\GSuite\\V1\\": "./src",
+      "Gsuite\\V1\\": "./generated/grpc/GSuite/V1",
+      "GPBMetadata\\Gsuite\\V1\\": "./generated/grpc/GPBMetadata/GSuite/V1"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  }
+}
