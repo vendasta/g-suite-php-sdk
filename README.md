@@ -56,7 +56,7 @@ Notice that the environment will be set to DEMO if it is not specified.
 
 ## Getting domain availability
 ```php
-$req = new GSuite\V1\GetDomainAvailableRequest();
+$req = new GSuite\V1\GetDomainInformationRequest();
 $req->setDomain("<domain>");
-$resp = $client->GetDomainAvailable($req);
+$resp = $client->GetDomainInformation($req);
 ```

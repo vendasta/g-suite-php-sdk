@@ -20,7 +20,7 @@ class GSuitePartnerClientTest extends TestCase
         try {
             $resp = $client->GetDomainInformation($req);
         } catch (Vendasta\Vax\SDKException $e) {
-            self::fail('unexpected failure');
+            self::assertEquals(404, $e->getCode(), 'expected a 404');
             return;
         }
 
