@@ -59,4 +59,18 @@ class GSuitePartnerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Changes the number of seats for a subscription
+     * @param \Gsuite\V1\ChangeSeatsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ChangeSeats(\Gsuite\V1\ChangeSeatsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/gsuite.v1.GSuitePartner/ChangeSeats',
+        $argument,
+        ['\Gsuite\V1\ChangeSeatsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
