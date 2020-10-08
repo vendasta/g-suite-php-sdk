@@ -49,14 +49,35 @@ if ($environment == null) {
     $environment = "DEMO";
 }
 
-$client = new Vendasta\GSuite\V1\GSuitePartnerClient($environment);
+$client = new Vendasta\GSuite\V1\PartnerClient($environment);
 ```
 
 Notice that the environment will be set to DEMO if it is not specified.
 
-## Getting domain availability
+## Getting domain information
 ```php
 $req = new GSuite\V1\GetDomainInformationRequest();
 $req->setDomain("<domain>");
 $resp = $client->GetDomainInformation($req);
+```
+
+## Reducing seats
+
+If needed, a list of subscriptions and their SKU IDs can be found [here](https://developers.google.com/admin-sdk/licensing/v1/how-tos/products). 
+
+```php
+$req = new ListSubscriptionsRequest();
+$req->setDomain("<domain>");
+
+$resp = $client->ListSubscriptions($req);
+
+$subscriptions = $resp->getSubscriptions();
+$subscriptionID = $subscriptions[0]->getSubscriptionId();
+
+$req = new ChangeSeatsRequest();
+$req->setCustomerId("<domain>");
+$req->setSubscriptionId($subscriptionID);
+$req->setSeats(1);
+
+$resp = $client->ChangeSeats($req);
 ```
