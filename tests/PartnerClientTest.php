@@ -1,6 +1,8 @@
 <?php
 
+use Gsuite\V1\ChangeSeatsRequest;
 use Gsuite\V1\GetDomainInformationRequest;
+use Gsuite\V1\ListSubscriptionsRequest;
 use PHPUnit\Framework\TestCase;
 use Vendasta\GSuite\V1\PartnerClient;
 
@@ -44,7 +46,7 @@ class PartnerClientTest extends TestCase
         try {
             $resp = $partnerClient->ListSubscriptions($req);
         } catch (Vendasta\Vax\SDKException $e) {
-            self::fail('error on ListSubscriptions', $e);
+            self::fail('error on ListSubscriptions: ' . $e);
         }
 
         $subscriptions = $resp->getSubscriptions();
@@ -58,7 +60,7 @@ class PartnerClientTest extends TestCase
         try {
             $resp = $partnerClient->ChangeSeats($req);
         } catch (Vendasta\Vax\SDKException $e) {
-            self::fail('error on ChangeSeats', $e);
+            self::fail('error on ChangeSeats: ' . $e);
         }
 
         self::assertNotEmpty($resp->getSeats(), 'expected seats to be returned');
