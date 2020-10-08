@@ -30,4 +30,32 @@ class PartnerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Get the domain information for a G Suite account
+     * @param \Gsuite\V1\GetDomainInformationRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetDomainInformation(\Gsuite\V1\GetDomainInformationRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/gsuite.v1.Partner/GetDomainInformation',
+        $argument,
+        ['\Gsuite\V1\GetDomainInformationResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Changes the number of seats for a subscription
+     * @param \Gsuite\V1\ChangeSeatsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function ChangeSeats(\Gsuite\V1\ChangeSeatsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/gsuite.v1.Partner/ChangeSeats',
+        $argument,
+        ['\Gsuite\V1\ChangeSeatsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

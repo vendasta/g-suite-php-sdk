@@ -2,9 +2,9 @@
 
 use Gsuite\V1\GetDomainInformationRequest;
 use PHPUnit\Framework\TestCase;
-use Vendasta\GSuite\V1\GSuitePartnerClient;
+use Vendasta\GSuite\V1\PartnerClient;
 
-class GSuitePartnerClientTest extends TestCase
+class PartnerClientTest extends TestCase
 {
     public function testGetDomainInformationHappyPath()
     {
@@ -12,13 +12,13 @@ class GSuitePartnerClientTest extends TestCase
         if ($environment == null) {
             $environment = "DEMO";
         }
-        $client = new GSuitePartnerClient($environment);
+        $partnerClient = new PartnerClient($environment);
 
         $req = new GetDomainInformationRequest();
         $req->setDomain("google.com");
 
         try {
-            $resp = $client->GetDomainInformation($req);
+            $resp = $partnerClient->GetDomainInformation($req);
         } catch (Vendasta\Vax\SDKException $e) {
             self::assertEquals(404, $e->getCode(), 'expected a 404');
             return;
@@ -36,7 +36,6 @@ class GSuitePartnerClientTest extends TestCase
         if ($environment == null) {
             $environment = "DEMO";
         }
-        $gSuitePartnerClient = new GSuitePartnerClient($environment);
         $partnerClient = new PartnerClient($environment);
 
         $req = new ListSubscriptionsRequest();
@@ -57,7 +56,7 @@ class GSuitePartnerClientTest extends TestCase
         $req->setSeats(1);
 
         try {
-            $resp = $client->ChangeSeats($req);
+            $resp = $partnerClient->ChangeSeats($req);
         } catch (Vendasta\Vax\SDKException $e) {
             self::fail('error on ChangeSeats', $e);
         }
