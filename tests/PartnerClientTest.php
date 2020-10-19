@@ -53,7 +53,7 @@ class PartnerClientTest extends TestCase
         $subscriptionID = $subscriptions[0]->getSubscriptionId();
 
         $req = new ChangeSeatsRequest();
-        $req->setCustomerId("domain.com");
+        $req->setDomain("domain.com");
         $req->setSubscriptionId($subscriptionID);
         $req->setSeats(1);
 

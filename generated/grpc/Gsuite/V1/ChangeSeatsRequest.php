@@ -18,9 +18,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>string domain = 1;</code>
      */
-    private $customer_id = '';
+    private $domain = '';
     /**
      * <code>string subscription_id = 2;</code>
      */
@@ -36,20 +36,20 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>string domain = 1;</code>
      */
-    public function getCustomerId()
+    public function getDomain()
     {
-        return $this->customer_id;
+        return $this->domain;
     }
 
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>string domain = 1;</code>
      */
-    public function setCustomerId($var)
+    public function setDomain($var)
     {
         GPBUtil::checkString($var, True);
-        $this->customer_id = $var;
+        $this->domain = $var;
     }
 
     /**

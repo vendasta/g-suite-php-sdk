@@ -54,7 +54,7 @@ class PartnerClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/gsuite.v1.Partner/ChangeSeats',
         $argument,
-        ['\Gsuite\V1\ChangeSeatsResponse', 'decode'],
+        ['\Google\Protobuf\Empty', 'decode'],
         $metadata, $options);
     }
 
