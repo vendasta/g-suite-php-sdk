@@ -63,6 +63,6 @@ class PartnerClientTest extends TestCase
             self::fail('error on ChangeSeats: ' . $e);
         }
 
-        self::assertNotEmpty($resp->getSeats(), 'expected seats to be returned');
+        self::assertNotEmpty($resp, 'expected a response');
     }
 }
