@@ -152,3 +152,71 @@ class Subscription extends \Google\Protobuf\Internal\Message
 
 }
 
+// This must be in the same file or the SDK cannot find it
+/**
+ * Protobuf type <code>gsuite.v1.Subscription.Plan</code>
+ */
+class Subscription_Plan extends \Google\Protobuf\Internal\Message
+{
+    /**
+     * <code>string plan_name = 1;</code>
+     */
+    private $plan_name = '';
+
+    public function __construct() {
+        \GPBMetadata\Gsuite\V1\Api::initOnce();
+        parent::__construct();
+    }
+
+    /**
+     * <code>string plan_name = 1;</code>
+     */
+    public function getPlanName()
+    {
+        return $this->plan_name;
+    }
+
+    /**
+     * <code>string plan_name = 1;</code>
+     */
+    public function setPlanName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->plan_name = $var;
+    }
+
+}
+
+/**
+ * Protobuf type <code>gsuite.v1.Subscription.TransferInfo</code>
+ */
+class Subscription_TransferInfo extends \Google\Protobuf\Internal\Message
+{
+    /**
+     * <code>int64 minimum_transferable_seats = 1;</code>
+     */
+    private $minimum_transferable_seats = 0;
+
+    public function __construct() {
+        \GPBMetadata\Gsuite\V1\Api::initOnce();
+        parent::__construct();
+    }
+
+    /**
+     * <code>int64 minimum_transferable_seats = 1;</code>
+     */
+    public function getMinimumTransferableSeats()
+    {
+        return $this->minimum_transferable_seats;
+    }
+
+    /**
+     * <code>int64 minimum_transferable_seats = 1;</code>
+     */
+    public function setMinimumTransferableSeats($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->minimum_transferable_seats = $var;
+    }
+
+}

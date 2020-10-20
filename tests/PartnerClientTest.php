@@ -6,6 +6,8 @@ use Gsuite\V1\ListSubscriptionsRequest;
 use PHPUnit\Framework\TestCase;
 use Vendasta\GSuite\V1\PartnerClient;
 
+//include_once '../vendor/autoload.php';
+
 class PartnerClientTest extends TestCase
 {
     public function testGetDomainInformationHappyPath()
@@ -41,7 +43,7 @@ class PartnerClientTest extends TestCase
         $partnerClient = new PartnerClient($environment);
 
         $req = new ListSubscriptionsRequest();
-        $req->setDomain("domain.com");
+        $req->setDomain("goog-test.coreyhicksonoct192020.com.reseller.vendasta.com");
 
         try {
             $resp = $partnerClient->ListSubscriptions($req);
@@ -53,7 +55,7 @@ class PartnerClientTest extends TestCase
         $subscriptionID = $subscriptions[0]->getSubscriptionId();
 
         $req = new ChangeSeatsRequest();
-        $req->setDomain("domain.com");
+        $req->setDomain("goog-test.coreyhicksonoct192020.com.reseller.vendasta.com");
         $req->setSubscriptionId($subscriptionID);
         $req->setSeats(1);
 
