@@ -43,7 +43,7 @@ class PartnerClientTest extends TestCase
         $partnerClient = new PartnerClient($environment);
 
         $req = new ListSubscriptionsRequest();
-        $req->setDomain("goog-test.coreyhicksonoct192020.com.reseller.vendasta.com");
+        $req->setDomain("domain.com");
 
         try {
             $resp = $partnerClient->ListSubscriptions($req);
@@ -55,7 +55,7 @@ class PartnerClientTest extends TestCase
         $subscriptionID = $subscriptions[0]->getSubscriptionId();
 
         $req = new ChangeSeatsRequest();
-        $req->setDomain("goog-test.coreyhicksonoct192020.com.reseller.vendasta.com");
+        $req->setDomain("domain.com");
         $req->setSubscriptionId($subscriptionID);
         $req->setSeats(1);
 
