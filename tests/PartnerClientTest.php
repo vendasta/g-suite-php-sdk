@@ -85,8 +85,7 @@ class PartnerClientTest extends TestCase
         try {
             $resp = $partnerClient->UpdateSSO($req);
         } catch (Vendasta\Vax\SDKException $e) {
-            self::assertEquals(404, $e->getCode(), 'expected a 404');
-            return;
+            self::fail('error on UpdateSSO: ' . $e);
         }
 
         self::assertEmpty($resp, 'expected an empty response');
