@@ -66,7 +66,11 @@ class PartnerClientTest extends TestCase
             self::fail('error on ChangeSeats: ' . $e);
         }
 
-        self::assertEmpty($resp, 'expected an empty response');
+        self::assertEquals(
+            new Google\Protobuf\GPBEmpty(),
+            $resp,
+            'expected response to be GPBEmpty()',
+        );
     }
 
     public function testUpdateSSOHappyPath()
@@ -88,6 +92,11 @@ class PartnerClientTest extends TestCase
             self::fail('error on UpdateSSO: ' . $e);
         }
 
-        self::assertEmpty($resp, 'expected an empty response');
+        self::assertEquals(
+            new Google\Protobuf\GPBEmpty(),
+            $resp,
+            'expected response to be GPBEmpty()',
+        );
     }
+
 }
