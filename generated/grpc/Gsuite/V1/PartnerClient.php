@@ -58,4 +58,18 @@ class PartnerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Updates the SSO settings for a G Suite account
+     * @param \Gsuite\V1\UpdateSSORequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UpdateSSO(\Gsuite\V1\UpdateSSORequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/gsuite.v1.Partner/UpdateSSO',
+        $argument,
+        ['\Google\Protobuf\Empty', 'decode'],
+        $metadata, $options);
+    }
+
 }
