@@ -66,7 +66,7 @@ class PartnerClientTest extends TestCase
             self::fail('error on ChangeSeats: ' . $e);
         }
 
-        self::assertNotEmpty($resp, 'expected a response');
+        self::assertEmpty($resp, 'expected an empty response');
     }
 
     public function testUpdateSSOHappyPath()
@@ -89,6 +89,6 @@ class PartnerClientTest extends TestCase
             return;
         }
 
-        self::assertNotEmpty($resp, 'expected a response');
+        self::assertEmpty($resp, 'expected an empty response');
     }
 }
