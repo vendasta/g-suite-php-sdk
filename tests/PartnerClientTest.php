@@ -3,6 +3,7 @@
 use Gsuite\V1\ChangeSeatsRequest;
 use Gsuite\V1\GetDomainInformationRequest;
 use Gsuite\V1\ListSubscriptionsRequest;
+use Gsuite\V1\UpdateSSORequest;
 use PHPUnit\Framework\TestCase;
 use Vendasta\GSuite\V1\PartnerClient;
 
@@ -63,6 +64,29 @@ class PartnerClientTest extends TestCase
             $resp = $partnerClient->ChangeSeats($req);
         } catch (Vendasta\Vax\SDKException $e) {
             self::fail('error on ChangeSeats: ' . $e);
+        }
+
+        self::assertNotEmpty($resp, 'expected a response');
+    }
+
+    public function testUpdateSSOHappyPath()
+    {
+        $environment = getenv("ENVIRONMENT");
+        if ($environment == null) {
+            $environment = "DEMO";
+        }
+        $partnerClient = new PartnerClient($environment);
+
+        $req = new UpdateSSORequest();
+        $req->setDomain("google.com");
+        // disable SSO
+        $req->setEnableSso(false);
+
+        try {
+            $resp = $partnerClient->UpdateSSO($req);
+        } catch (Vendasta\Vax\SDKException $e) {
+            self::assertEquals(404, $e->getCode(), 'expected a 404');
+            return;
         }
 
         self::assertNotEmpty($resp, 'expected a response');
