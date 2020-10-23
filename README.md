@@ -81,3 +81,14 @@ $req->setSeats(1);
 
 $resp = $client->ChangeSeats($req);
 ```
+
+## Disabling SSO
+
+```php
+$req = new UpdateSSORequest();
+$req->setDomain("<domain>");
+// disable SSO
+$req->setEnableSso(false);
+
+$resp = $client->UpdateSSO($req);
+```
