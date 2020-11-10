@@ -17,9 +17,9 @@ class Config
             'secure' => true,
         ],
         "LOCAL" => [
-            'host' => 'google-admin-demo.vendasta-local.com',
-            'scope' => 'http://google-admin-demo.vendasta-local.com',
-            'url' => 'http://google-admin-demo.vendasta-local.com',
+            'host' => 'google-admin.vendasta-local.com',
+            'scope' => 'http://google-admin.vendasta-local.com',
+            'url' => 'http://google-admin.vendasta-local.com',
             'secure' => false,
         ]
     ];
