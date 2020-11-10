@@ -5,21 +5,21 @@ class Config
 {
     const ENVIRONMENT_PARAMS = [
         "PROD" => [
-            'host' => 'g-suite-api-prod.vendasta-internal.com:443',
-            'scope' => 'https://g-suite-api-prod.vendasta-internal.com',
-            'url' => 'https://g-suite-api-prod.vendasta-internal.com',
+            'host' => 'google-admin-prod.apigateway.co:443',
+            'scope' => 'https://google-admin-prod.apigateway.co',
+            'url' => 'https://google-admin-prod.apigateway.co',
             'secure' => true,
         ],
         "DEMO" => [
-            'host' => 'g-suite-api-demo.vendasta-internal.com:443',
-            'scope' => 'https://g-suite-api-demo.vendasta-internal.com',
-            'url' => 'https://g-suite-api-demo.vendasta-internal.com',
+            'host' => 'google-admin-demo.apigateway.co:443',
+            'scope' => 'https://google-admin-demo.apigateway.co',
+            'url' => 'https://google-admin-demo.apigateway.co',
             'secure' => true,
         ],
         "LOCAL" => [
-            'host' => 'http://g-suite-api.vendasta-local.com',
-            'scope' => 'http://g-suite-api.vendasta-local.com',
-            'url' => 'http://g-suite-api.vendasta-local.com',
+            'host' => 'google-admin.vendasta-local.com',
+            'scope' => 'http://google-admin.vendasta-local.com',
+            'url' => 'http://google-admin.vendasta-local.com',
             'secure' => false,
         ]
     ];
