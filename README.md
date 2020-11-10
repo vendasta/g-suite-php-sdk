@@ -1,9 +1,9 @@
 # g-suite-php-sdk
-GSuite php sdk
+Google Workspace PHP SDK
 
 ## Description
 
-This is Vendasta's official PHP SDK for API integration of g-suite.
+This is Vendasta's official PHP SDK for API integration of Google Workspace.
 
 ## Requirements
 
@@ -25,7 +25,7 @@ composer require vendasta/gsuite
 
 To authenticate your SDK calls, you must provision a service account from within the Vendasta platform.
 
-You must put this file on your server, and set an environment variable to it's path:
+You must put this file on your server, and set an environment variable to its path:
 
 ```bash
 export VENDASTA_APPLICATION_CREDENTIALS=<path to credentials.json>
@@ -33,7 +33,7 @@ export VENDASTA_APPLICATION_CREDENTIALS=<path to credentials.json>
 
 ## Client Initialization
 
-It is highly recommended that you use a singleton client instance. Each client initilization will open it's own connection, therefore using a singleton results in reusing a connection, saving time and resources.
+It is highly recommended that you use a singleton client instance. Each client initialization will open its own connection, therefore using a singleton results in reusing a connection, saving time and resources.
 
 Set an environment variable:
 
