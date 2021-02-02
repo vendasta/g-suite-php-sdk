@@ -1,12 +1,12 @@
 <?php 
 namespace Vendasta\GSuite\V1;
 
-use Vendasta\GSuite\V1\internal\PartnerGeneratedClient;
+use Vendasta\GSuite\V1\internal\PartnerServiceGeneratedClient;
 
-class PartnerClient extends PartnerGeneratedClient
+class PartnerServiceClient extends PartnerServiceGeneratedClient
 {
     /**
-     * PartnerClient constructor.
+     * PartnerServiceClient constructor.
      * @param string $env one of \Vendasta\Vax\Environment::<Env>
      * @param float $default_timeout
      */

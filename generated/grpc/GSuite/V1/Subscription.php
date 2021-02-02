@@ -19,26 +19,50 @@ use Google\Protobuf\Internal\GPBUtil;
 class Subscription extends \Google\Protobuf\Internal\Message
 {
     /**
+     * <pre>
+     * Unique system identifier google uses for a product's sku
+     * </pre>
+     *
      * <code>string sku_id = 1;</code>
      */
     private $sku_id = '';
     /**
+     * <pre>
+     * The product sku name
+     * </pre>
+     *
      * <code>string sku_name = 2;</code>
      */
     private $sku_name = '';
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 3;</code>
      */
     private $subscription_id = '';
     /**
+     * <pre>
+     * The G Suite plan for a subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.Plan plan = 4;</code>
      */
     private $plan = null;
     /**
+     * <pre>
+     * Seats model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Seats seats = 5;</code>
      */
     private $seats = null;
     /**
+     * <pre>
+     * TransferInfo model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.TransferInfo transfer_info = 6;</code>
      */
     private $transfer_info = null;
@@ -49,6 +73,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Unique system identifier google uses for a product's sku
+     * </pre>
+     *
      * <code>string sku_id = 1;</code>
      */
     public function getSkuId()
@@ -57,6 +85,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Unique system identifier google uses for a product's sku
+     * </pre>
+     *
      * <code>string sku_id = 1;</code>
      */
     public function setSkuId($var)
@@ -66,6 +98,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The product sku name
+     * </pre>
+     *
      * <code>string sku_name = 2;</code>
      */
     public function getSkuName()
@@ -74,6 +110,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The product sku name
+     * </pre>
+     *
      * <code>string sku_name = 2;</code>
      */
     public function setSkuName($var)
@@ -83,6 +123,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 3;</code>
      */
     public function getSubscriptionId()
@@ -91,6 +135,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 3;</code>
      */
     public function setSubscriptionId($var)
@@ -100,6 +148,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The G Suite plan for a subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.Plan plan = 4;</code>
      */
     public function getPlan()
@@ -108,15 +160,23 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The G Suite plan for a subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.Plan plan = 4;</code>
      */
     public function setPlan(&$var)
     {
-        GPBUtil::checkMessage($var, \Gsuite\V1\Subscription\Plan::class);
+        GPBUtil::checkMessage($var, \Gsuite\V1\Subscription_Plan::class);
         $this->plan = $var;
     }
 
     /**
+     * <pre>
+     * Seats model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Seats seats = 5;</code>
      */
     public function getSeats()
@@ -125,6 +185,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Seats model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Seats seats = 5;</code>
      */
     public function setSeats(&$var)
@@ -134,6 +198,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * TransferInfo model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.TransferInfo transfer_info = 6;</code>
      */
     public function getTransferInfo()
@@ -142,6 +210,10 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * TransferInfo model for a G Suite subscription
+     * </pre>
+     *
      * <code>.gsuite.v1.Subscription.TransferInfo transfer_info = 6;</code>
      */
     public function setTransferInfo(&$var)
@@ -151,3 +223,4 @@ class Subscription extends \Google\Protobuf\Internal\Message
     }
 
 }
+

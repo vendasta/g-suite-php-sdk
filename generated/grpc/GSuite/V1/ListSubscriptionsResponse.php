@@ -9,6 +9,10 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * <pre>
+ * response for getting subscriptions on a G Suite Customer
+ * </pre>
+ *
  * Protobuf type <code>gsuite.v1.ListSubscriptionsResponse</code>
  */
 class ListSubscriptionsResponse extends \Google\Protobuf\Internal\Message
