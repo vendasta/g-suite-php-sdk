@@ -49,7 +49,7 @@ if ($environment == null) {
     $environment = "DEMO";
 }
 
-$client = new Vendasta\GSuite\V1\PartnerClient($environment);
+$client = new Vendasta\GSuite\V1\PartnerServiceClient($environment);
 ```
 
 Notice that the environment will be set to DEMO if it is not specified.

@@ -9,7 +9,7 @@ use Vendasta\GSuite\V1\PartnerServiceClient;
 
 //include_once '../vendor/autoload.php';
 
-class PartnerClientTest extends TestCase
+class PartnerServiceClientTest extends TestCase
 {
     public function testGetDomainInformationHappyPath()
     {
