@@ -5,11 +5,11 @@ use Gsuite\V1\GetDomainInformationRequest;
 use Gsuite\V1\ListSubscriptionsRequest;
 use Gsuite\V1\UpdateSSORequest;
 use PHPUnit\Framework\TestCase;
-use Vendasta\GSuite\V1\PartnerClient;
+use Vendasta\GSuite\V1\PartnerServiceClient;
 
 //include_once '../vendor/autoload.php';
 
-class PartnerClientTest extends TestCase
+class PartnerServiceClientTest extends TestCase
 {
     public function testGetDomainInformationHappyPath()
     {
@@ -17,7 +17,7 @@ class PartnerClientTest extends TestCase
         if ($environment == null) {
             $environment = "DEMO";
         }
-        $partnerClient = new PartnerClient($environment);
+        $partnerClient = new PartnerServiceClient($environment);
 
         $req = new GetDomainInformationRequest();
         $req->setDomain("google.com");
@@ -41,7 +41,7 @@ class PartnerClientTest extends TestCase
         if ($environment == null) {
             $environment = "DEMO";
         }
-        $partnerClient = new PartnerClient($environment);
+        $partnerClient = new PartnerServiceClient($environment);
 
         $req = new ListSubscriptionsRequest();
         $req->setDomain("domain.com");
@@ -79,7 +79,7 @@ class PartnerClientTest extends TestCase
         if ($environment == null) {
             $environment = "DEMO";
         }
-        $partnerClient = new PartnerClient($environment);
+        $partnerClient = new PartnerServiceClient($environment);
 
         $req = new UpdateSSORequest();
         $req->setDomain("google.com");

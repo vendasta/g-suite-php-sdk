@@ -4,8 +4,9 @@
 namespace Gsuite\V1;
 
 /**
+ * Service that partners can use to interact with our API's
  */
-class PartnerClient extends \Grpc\BaseStub {
+class PartnerServiceClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -24,7 +25,7 @@ class PartnerClient extends \Grpc\BaseStub {
      */
     public function ListSubscriptions(\Gsuite\V1\ListSubscriptionsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/gsuite.v1.Partner/ListSubscriptions',
+        return $this->_simpleRequest('/gsuite.v1.PartnerService/ListSubscriptions',
         $argument,
         ['\Gsuite\V1\ListSubscriptionsResponse', 'decode'],
         $metadata, $options);
@@ -38,7 +39,7 @@ class PartnerClient extends \Grpc\BaseStub {
      */
     public function GetDomainInformation(\Gsuite\V1\GetDomainInformationRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/gsuite.v1.Partner/GetDomainInformation',
+        return $this->_simpleRequest('/gsuite.v1.PartnerService/GetDomainInformation',
         $argument,
         ['\Gsuite\V1\GetDomainInformationResponse', 'decode'],
         $metadata, $options);
@@ -52,7 +53,7 @@ class PartnerClient extends \Grpc\BaseStub {
      */
     public function ChangeSeats(\Gsuite\V1\ChangeSeatsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/gsuite.v1.Partner/ChangeSeats',
+        return $this->_simpleRequest('/gsuite.v1.PartnerService/ChangeSeats',
         $argument,
         ['\Google\Protobuf\Empty', 'decode'],
         $metadata, $options);
@@ -66,9 +67,23 @@ class PartnerClient extends \Grpc\BaseStub {
      */
     public function UpdateSSO(\Gsuite\V1\UpdateSSORequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/gsuite.v1.Partner/UpdateSSO',
+        return $this->_simpleRequest('/gsuite.v1.PartnerService/UpdateSSO',
         $argument,
         ['\Google\Protobuf\Empty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Gets the SSO settings for a G Suite account
+     * @param \Gsuite\V1\GetSSORequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetSSO(\Gsuite\V1\GetSSORequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/gsuite.v1.PartnerService/GetSSO',
+        $argument,
+        ['\Gsuite\V1\GetSSOResponse', 'decode'],
         $metadata, $options);
     }
 

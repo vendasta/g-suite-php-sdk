@@ -9,19 +9,35 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ * <pre>
+ * Nested entity for subscription seats
+ * </pre>
+ *
  * Protobuf type <code>gsuite.v1.Seats</code>
  */
 class Seats extends \Google\Protobuf\Internal\Message
 {
     /**
+     * <pre>
+     * Read-only field for the current number of users that are assigned a license for the product defined in the skuId
+     * </pre>
+     *
      * <code>int64 licensed_number_of_seats = 1;</code>
      */
     private $licensed_number_of_seats = 0;
     /**
+     * <pre>
+     * The maximum number of seats for a G Suite customer; Exclusive to subscriptions with flexible or trial plans
+     * </pre>
+     *
      * <code>int64 maximum_number_of_seats = 2;</code>
      */
     private $maximum_number_of_seats = 0;
     /**
+     * <pre>
+     * The number of seats for a G Suite customer; Exclusive to subscriptions with annual plans
+     * </pre>
+     *
      * <code>int64 number_of_seats = 3;</code>
      */
     private $number_of_seats = 0;
@@ -32,6 +48,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Read-only field for the current number of users that are assigned a license for the product defined in the skuId
+     * </pre>
+     *
      * <code>int64 licensed_number_of_seats = 1;</code>
      */
     public function getLicensedNumberOfSeats()
@@ -40,6 +60,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Read-only field for the current number of users that are assigned a license for the product defined in the skuId
+     * </pre>
+     *
      * <code>int64 licensed_number_of_seats = 1;</code>
      */
     public function setLicensedNumberOfSeats($var)
@@ -49,6 +73,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The maximum number of seats for a G Suite customer; Exclusive to subscriptions with flexible or trial plans
+     * </pre>
+     *
      * <code>int64 maximum_number_of_seats = 2;</code>
      */
     public function getMaximumNumberOfSeats()
@@ -57,6 +85,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The maximum number of seats for a G Suite customer; Exclusive to subscriptions with flexible or trial plans
+     * </pre>
+     *
      * <code>int64 maximum_number_of_seats = 2;</code>
      */
     public function setMaximumNumberOfSeats($var)
@@ -66,6 +98,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The number of seats for a G Suite customer; Exclusive to subscriptions with annual plans
+     * </pre>
+     *
      * <code>int64 number_of_seats = 3;</code>
      */
     public function getNumberOfSeats()
@@ -74,6 +110,10 @@ class Seats extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The number of seats for a G Suite customer; Exclusive to subscriptions with annual plans
+     * </pre>
+     *
      * <code>int64 number_of_seats = 3;</code>
      */
     public function setNumberOfSeats($var)

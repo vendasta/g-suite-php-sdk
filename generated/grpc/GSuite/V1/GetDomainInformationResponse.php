@@ -18,6 +18,10 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetDomainInformationResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * <pre>
+     * DomainInformation model
+     * </pre>
+     *
      * <code>.gsuite.v1.DomainInformation domain_information = 1;</code>
      */
     private $domain_information = null;
@@ -28,6 +32,10 @@ class GetDomainInformationResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * DomainInformation model
+     * </pre>
+     *
      * <code>.gsuite.v1.DomainInformation domain_information = 1;</code>
      */
     public function getDomainInformation()
@@ -36,6 +44,10 @@ class GetDomainInformationResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * DomainInformation model
+     * </pre>
+     *
      * <code>.gsuite.v1.DomainInformation domain_information = 1;</code>
      */
     public function setDomainInformation(&$var)

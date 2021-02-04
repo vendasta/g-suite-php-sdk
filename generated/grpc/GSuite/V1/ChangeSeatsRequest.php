@@ -18,14 +18,26 @@ use Google\Protobuf\Internal\GPBUtil;
 class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     private $domain = '';
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 2;</code>
      */
     private $subscription_id = '';
     /**
+     * <pre>
+     * The number of seats the G Suite Customer has
+     * </pre>
+     *
      * <code>int64 seats = 3;</code>
      */
     private $seats = 0;
@@ -36,6 +48,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     public function getDomain()
@@ -44,6 +60,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     public function setDomain($var)
@@ -53,6 +73,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 2;</code>
      */
     public function getSubscriptionId()
@@ -61,6 +85,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The ID linked to the G Suite Customer's subscriptions
+     * </pre>
+     *
      * <code>string subscription_id = 2;</code>
      */
     public function setSubscriptionId($var)
@@ -70,6 +98,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The number of seats the G Suite Customer has
+     * </pre>
+     *
      * <code>int64 seats = 3;</code>
      */
     public function getSeats()
@@ -78,6 +110,10 @@ class ChangeSeatsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The number of seats the G Suite Customer has
+     * </pre>
+     *
      * <code>int64 seats = 3;</code>
      */
     public function setSeats($var)

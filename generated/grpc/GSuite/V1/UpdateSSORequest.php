@@ -18,10 +18,18 @@ use Google\Protobuf\Internal\GPBUtil;
 class UpdateSSORequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     private $domain = '';
     /**
+     * <pre>
+     * Indicates whether SSO is enabled or disabled
+     * </pre>
+     *
      * <code>bool enable_sso = 2;</code>
      */
     private $enable_sso = false;
@@ -32,6 +40,10 @@ class UpdateSSORequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     public function getDomain()
@@ -40,6 +52,10 @@ class UpdateSSORequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * The domain of the G Suite customer
+     * </pre>
+     *
      * <code>string domain = 1;</code>
      */
     public function setDomain($var)
@@ -49,6 +65,10 @@ class UpdateSSORequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Indicates whether SSO is enabled or disabled
+     * </pre>
+     *
      * <code>bool enable_sso = 2;</code>
      */
     public function getEnableSso()
@@ -57,6 +77,10 @@ class UpdateSSORequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * <pre>
+     * Indicates whether SSO is enabled or disabled
+     * </pre>
+     *
      * <code>bool enable_sso = 2;</code>
      */
     public function setEnableSso($var)
