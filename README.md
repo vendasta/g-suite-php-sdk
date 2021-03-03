@@ -1,5 +1,4 @@
-# g-suite-php-sdk
-Google Workspace PHP SDK
+# Vendasta Google Workspace PHP SDK
 
 ## Description
 
