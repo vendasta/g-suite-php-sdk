@@ -1,6 +1,6 @@
 services:
   - name: g-suite-php-sdk
-    owner: quack-overflow
+    owner: quackoverflow
     language: php
     nonServiceType: library
     description: PHP SDK for the GSuite microservice
